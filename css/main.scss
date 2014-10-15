@@ -1,0 +1,74 @@
+---
+---
+
+// VARIABLES ==================================================================
+$color-base:									#444;
+$color-light:									#888;
+$color-dark:									#000;
+$color-structure:							#EEE;
+$color-highlight:							#FF0000;
+
+// COLORS =====================================================================
+body,
+header a											{ color: $color-base; }
+.blurb,
+.article--date								{ color: $color-light; }
+.blurb a,
+article h1 a									{ color: $color-dark; }
+a															{ color: $color-highlight; }
+header span.header--suffix		{ color: $color-highlight; }
+
+// TYPOGRAPHY =================================================================
+body {
+	font-family: helvetica, tahoma, sans-serif;
+	font-weight: 300;
+	line-height: 1.6;
+}
+li { list-style-type: none; }
+ul { padding-left: 0; }
+a { text-decoration: none; }
+
+header {
+	font-weight: 700;
+	span.header--suffix { font-weight: 300; }
+}
+dt { font-weight: 700; }
+
+article {
+	h1, p.article--date { margin: 0; }
+	ul { padding-left: 2rem; }
+	li { list-style-type: circle; }
+}
+
+.article--blurb { font-size: 120%; }
+
+// LAYOUT =====================================================================
+* { box-sizing: border-box; }
+body { padding: 2rem; }
+
+nav {
+	max-width: 20rem;
+	position: fixed;
+	top: 2em;
+	left: 2em;
+	padding-right: 2em;
+	text-align: right;
+	border-right: 2px solid $color-structure;
+}
+
+.content {
+	position: relative;
+	margin-left: 22rem;
+	padding-top: 1rem;
+	max-width: 50rem;
+}
+
+footer {
+	text-align: center;
+	margin: 5rem 0;
+	img {
+		width: 200px;
+		border: 5px solid $color-structure;
+		border-radius: 100px;
+	}
+}
